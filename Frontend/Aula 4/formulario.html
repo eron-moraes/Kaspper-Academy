@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários em HTML 5</title>
+</head>
+<body>
+    <h1>Formuário</h1>
+    <Form method="post">
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" name="nome" placeholder="Informe o seu nome">
+
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="dataNascimento">Data Naschimento:</label>
+        <input type="date" name="dataNascimento" id="date">
+
+        <label for="mes">Mês:</label>
+        <input type="month" name="mes" id="mes">
+
+        <label for="idade">Idade: </label>
+        <input type="number" num="18" max="70" name="idade" id="idade"></br>
+
+        <label for="regiao">Região:</label>
+        <input type="radio" name="regiao" id="regiao" value="sul">Sul
+        <input type="radio" name="regiao" id="regiao" value="sudeste">Suldeste
+        <input type="radio" name="regiao" id="regiao" value="centrooeste">Centro-oeste
+        <input type="radio" name="regiao" id="regiao" value="norte">Norte
+        <input type="radio" name="regiao" id="regiao" value="nordeste">Nordeste
+    </br>
+
+        <label for="estados">UF: </label>
+        <select name="estados" id="estados">
+            <option value="rs">Rio Grande do Sul</option>
+            <option value="sc">Santa Catarina</option>
+            <option value="pr">Paraná</option>
+
+        </select>
+    </br>
+</br>
+        <label for="mensagem">Mensagem: </label>
+        <textarea name="mensagem" id="mensagem" cols="30" rows="5"></textarea></br>
+
+        <label for="placa">Placa: </label>
+        <input type="text" required pattern="[A-Z]{3}[0-9]{4}" placeholder="AAAAA">
+
+
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+
+    </Form>
+    
+</body>
+</html>

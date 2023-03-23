@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Formulário do Candidato</title>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 10px;
+                text-align: left;
+            }
+    
+            input[type=text], select {
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+    
+            input[type=submit] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 8px 16px;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: bold;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+    
+            input[type=submit]:hover {
+                background-color: #3e8e41;
+            }
+    
+            .error {
+                color: red;
+                font-size: 14px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Formulário do Candidato</h1>
+        <form method="post" action="">
+            <table>
+                <tr>
+                    <th><label for="nome">Nome:</label></th>
+                    <td><input type="text" name="nome" id="nome" required></td>
+                </tr>
+                <tr>
+                    <th><label for="sexo">Sexo:</label></th>
+                    <td>
+                        <select name="sexo" id="sexo">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="renda">Renda:</label></th>
+                    <td><input type="text" name="renda" id="renda" required></td>
+                </tr>
+                <tr>
+                    <th><label for="time">Time:</label></th>
+                    <td>
+                        <select name="time" id="time">
+                            <option value="corinthians">Corinthians</option>
+                            <option value="palmeiras">Palmeiras</option>
+                            <option value="santos">Santos</option>
+                            <option value="são paulo">São Paulo</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="cartao">Cartão de Crédito:</label></th>
+                    <td><input type="text" name="cartao" id="cartao" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Enviar">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+    </html>
+    

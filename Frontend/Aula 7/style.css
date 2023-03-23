@@ -1,0 +1,21 @@
+.texto_negrito {
+    font-weight: bold;
+}
+
+.texto_maiusculo {
+    text-transform: uppercase;
+}
+
+.img_thumb {
+    width: 300px;
+}
+
+.texto_espacado {
+    padding: 10px;
+}
+
+/* Não utilize dados sensíveis e nem excesso. */
+
+.paragrafo_relativo {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário</title>
+        <style>
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            input[type="text"], select {
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            input[type="submit"] {
+                padding: 10px 20px;
+                border: none;
+                background-color: #4CAF50;
+                color: #fff;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+            td, th {
+                padding: 10px;
+                border: 1px solid #ccc;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Formulário de Candidato</h1>
+        <form>
+            <table>
+                <tr>
+                    <th><label for="nome">Nome:</label></th>
+                    <td><input type="text" id="nome" name="nome" /></td>
+                </tr>
+                <tr>
+                    <th><label for="sexo">Sexo:</label></th>
+                    <td>
+                        <select id="sexo" name="sexo">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="renda">Renda:</label></th>
+                    <td><input type="text" id="renda" name="renda" /></td>
+                </tr>
+                <tr>
+                    <th><label for="time">Time:</label></th>
+                    <td><input type="text" id="time" name="time" /></td>
+                </tr>
+                <tr>
+                    <th><label for="cartao">Cartão de Crédito:</label></th>
+                    <td><input type="text" id="cartao" name="cartao" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" /></td>
+                </tr>
+            </table>
+            <input type="submit" value="Enviar" />
+        </form>
+    </body>
+    </html>
+    

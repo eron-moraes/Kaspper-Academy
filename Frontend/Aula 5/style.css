@@ -1,0 +1,20 @@
+h2 {
+    border: 2px solid violet;
+}
+
+/* Utilizando Classes */
+
+.tituloPersonalizado {
+    border: 2px solid Tomato;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Utilizando IDs */
+
+#paragrafoPersonalizado {
+    color:green;
+    background-color: white;
+    font-size: 28px;
+    
+}

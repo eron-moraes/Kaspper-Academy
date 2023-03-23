@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Revisão HTML e CSS</title>
+</head>
+<body>
+
+    <!-- 1º) Evite estilos Inline, como o exemplo abaixo -->
+    <p style="color: violet;">Esse é um parágrafo com CSS Inline</p>
+
+    <!-- 2º) Evite tags de formatação -->
+    <p>Isso é um texto <b>formatado</b>.</p>
+
+    <!-- Bom -->
+    <p>Isso é um texto <span class="texto_negrito">formatado</span>.</p>
+
+    <!-- 3º) Digite em minúscula -->
+    <h1>ISSO É UM TÍTULO</h1>
+
+    <h1 class="texto_maiusculo">Isso é um título</h1>
+
+    <!-- 4º) Utilize sempre validações do HTML required e type -->
+    <input type="email" name="email" id="email" placeholder="Informe o email" required>
+
+    <br><br>
+    <!-- 5º) Use o atributo alt -->
+    <img src="/Aula 7/thor-hemsworth.jpg" alt="thor-hemsworth" class="img_thumb">
+
+    <!-- 6º) Utilize shorthands em CSS -->
+    <div class="texto_espacado">Um texto com espaçamento interno estilizado.</div>
+
+    <!-- 7º) Utilize unidades de medidas relativas -->
+    <p class="paragrafo_relativo">Parágrafo com uma unidade de medida relativa.</p>
+    
+</body>
+</html>
