@@ -13,3 +13,12 @@ let soma2 = a + n3
 console.log('A soma dos números é '+soma2)
 
 // Verificando se o número é par ou impar
+function parimpar(soma2) {
+    if (soma2%2 == 0) {
+        return 'Par!'
+    } else {
+        return 'Impar!'
+    }
+}
+console.log(parimpar(2))
+
