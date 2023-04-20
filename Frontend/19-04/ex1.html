@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos disparados pelo HTML</title>
+</head>
+<body>
+    <div id="teste" onclick="clicar()" onmouseenter="entrar()" onmouseleave="sair()">
+        Clique aqui para interagir
+
+    </div>
+
+    <script>
+        // Recuperar por qerySelector
+        let teste = document.querySelector('div#teste');
+
+        function clicar(){
+            teste.textContent = "clicou!";
+        }
+
+        function entrar(){
+            teste.textContent = "Mouse entrou!";
+        }
+
+        function sair(){
+            teste.textContent = "Mouse saiu!";
+        }
+
+
+    </script>
+    
+</body>
+</html>

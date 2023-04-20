@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos disparados pelo Javascript</title>
+</head>
+<body>
+    <div id="teste">
+        Clique aqui para interagir
+    </div>
+
+    <script>
+        let teste = document.querySelector('#teste');
+
+        function clicar(){
+            teste.textContent = "clicou!";
+        }
+
+        function entrar(){
+            teste.textContent = "Mouse entrou!";
+        }
+
+        function sair(){
+            teste.textContent = "Mouse saiu!";
+        }
+
+        teste.addEventListener('click', clicar);
+        teste.addEventListener('mouseenter', entrar);
+        teste.addEventListener('mouseout', sair);
+    </script>
+    
+</body>
+</html>
