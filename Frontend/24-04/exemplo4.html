@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom formulario</title>
+</head>
+<body>
+    <div>
+        <label for="nome">Informe seu nome: </label>
+        <input type="text" id="nome">
+        <br>
+        <label for="linguagem">Qual o seu framework favorito?</label>
+        <select name="linguagem" id="linguagem">
+            <option value="angular">Angular</option>
+            <option value="vue">Vue</option>
+            <option value="react">React</option>
+        </select>
+        <br>
+
+        <button id="btnEnviar">Enviar</button>
+        <div id="mensagem"></div>
+    </div>
+
+    <script>
+        let btnClick = function () {
+
+        let nome = document.getElementById("nome").value;
+        let linguagem = document.getElementById("linguagem").value;
+
+        let mensagem = document.getElementById("mensagem");
+        mensagem.textContent = nome + " selecionou " + linguagem;
+        //document.getElementById("mensagem").textContent = nome + " Selecionou " + linguagem;
+        }
+
+        let btnEnviar = document.getElementById("btnEnviar");
+        btnEnviar.addEventListener("click", btnClick);
+    </script>
+    
+</body>
+</html>

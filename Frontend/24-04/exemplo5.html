@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Propriedade dos eventos</title>
+    <style>
+        .barba{
+            background: black;
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            top: 80px;
+            left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <img id="imagem" 
+    src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/creatures/Hopper-Happy.png">
+
+
+    <script>
+        let imagem = document.getElementById("imagem");
+
+
+        let mouseMove = function(e){
+            //Criando um elemento
+            let barbaDiv = document.createElement("div");
+            barbaDiv.className = "barba";
+            // Adicionar o elemento Barba Div
+            document.body.appendChild(barbaDiv);
+            barbaDiv.style.top = e.clientY + "px"; 
+            barbaDiv.style.left = e.clientX + "px";            
+        }
+
+        imagem.addEventListener("mousemove", mouseMove);
+
+    </script>
+    
+</body>
+</html>
