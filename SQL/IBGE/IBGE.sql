@@ -21,5 +21,5 @@ WHERE estado.id = 18;
 # Contagem de registros
 SELECT COUNT(cidade.nome) as total_cidades, estado.nome from cidade
 INNER JOIN estado ON cidade.uf = estado.id
-WHERE estado.id = 26
+WHERE estado.id = 26cidadenomeidnomeibgeid
 GROUP BY estado.nome;
