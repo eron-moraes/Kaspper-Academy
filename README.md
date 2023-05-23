@@ -12,3 +12,8 @@ Backend: Java.
 As aulas iniciaram em Fevereiro de 2023 e o bootcamp terá duração de 6 meses.
 
 Esterei atualizando os projetos por aqui enquanto forem acontecendo...
+
+_______________
+1° Desafio: https://github.com/eron-moraes/ProjetoMarta
+
+O primeiro desafio foi criar um "Projeto Carona", feito em linguagem Java. Conheça os detalhes do projeto através do link do repositório acima.
