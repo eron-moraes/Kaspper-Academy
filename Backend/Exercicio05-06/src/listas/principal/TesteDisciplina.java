@@ -1,5 +1,6 @@
 package listas.principal;
 import java.util.ArrayList;
+import java.util.Collection;
 
 import listas.entidades.Disciplina;
 
@@ -11,6 +12,8 @@ public class TesteDisciplina{
         disciplinas.add(new Disciplina("Cobol", 100));
 
         System.out.println(disciplinas);
+
+        Collection.sort(disciplinas);
 
     }
 }
