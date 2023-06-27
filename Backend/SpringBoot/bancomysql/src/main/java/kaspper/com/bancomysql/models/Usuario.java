@@ -3,6 +3,9 @@ package kaspper.com.bancomysql.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,7 +34,9 @@ public class Usuario {
 	
 	
 	@OneToMany(mappedBy = "usuario")
+	@JsonProperty(access = Access.READ_WRITE)
 	private List<Apontamento> apontamentos = new ArrayList<Apontamento>();
+
 	
 
 }
