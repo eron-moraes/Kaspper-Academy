@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,11 +14,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.validation.Valid;
 import kaspper.com.bancomysql.models.Usuario;
 import kaspper.com.bancomysql.services.UsuarioServiceImpl;
 
 @RestController
 @RequestMapping("/usuarios")
+@Validated
 public class UsuarioController {
 	
 	@Autowired
@@ -36,7 +39,7 @@ public class UsuarioController {
 		
 	}
 	@PostMapping
-	public ResponseEntity<Usuario> salvar(@RequestBody Usuario usuario){
+	public ResponseEntity<Usuario> salvar(@Valid @RequestBody Usuario usuario){
 		this.usuarioService.salvar(usuario);
 		return ResponseEntity.ok(this.usuarioService.salvar(usuario));	
 	}
