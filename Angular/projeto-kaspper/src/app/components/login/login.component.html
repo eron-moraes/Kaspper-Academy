@@ -1,0 +1,28 @@
+<div class="signin-form">
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="login()">
+        <p>Informe as suas credenciais</p>
+
+        <mat-form-field class="full-width-input">
+
+          <input matInput type="text" placeholder="Usuário" formControlName="userName" required>
+          <mat-error>
+            Informe o usuário
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width-input">
+          <input matInput type="password" placeholder="Senha" formControlName="password" required>
+          <mat-error>
+            Informe a senha
+          </mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Login</button>
+
+      </form>
+
+    </mat-card-content>
+  </mat-card>
+</div>
