@@ -14,19 +14,25 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class LoginComponent implements OnInit {
   form!: FormGroup;
+  private formSubmit!: boolean;
 
   //Injeção de dependência
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      userName:['', Validators.required],
-      password:['', Validators.required]
+      userName: ['', Validators.required],
+      password: ['', Validators.required]
     })
 
   }
 
-  login(){
+  login() {
     console.log(this.form.value);
+  }
+
+  isFieldInvalid(field: string) {
+    return ((!this.form.get(field)?.valid && this.form.get(field)?.touched) ||
+      (this.form.get(field)?.untouched) && this.formSubmit);
   }
 }

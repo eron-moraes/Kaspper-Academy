@@ -7,14 +7,14 @@
         <mat-form-field class="full-width-input">
 
           <input matInput type="text" placeholder="Usuário" formControlName="userName" required>
-          <mat-error>
+          <mat-error *ngIf="isFieldInvalid('userName')">
             Informe o usuário
           </mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width-input">
           <input matInput type="password" placeholder="Senha" formControlName="password" required>
-          <mat-error>
+          <mat-error *ngIf="isFieldInvalid('password')">
             Informe a senha
           </mat-error>
         </mat-form-field>
