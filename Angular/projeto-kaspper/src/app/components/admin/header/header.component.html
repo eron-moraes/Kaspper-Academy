@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" class="header mat-elevation-z4">
+<mat-toolbar *ngIf="auth.isLoggedIn" color="primary" class="header mat-elevation-z4">
   <span>
     <a routerLink="/">
       <img class="logo" src="assets/img/logo.png">
@@ -6,7 +6,7 @@
   </span>
 
   <section>
-    <a mat-button routerlink="">Home</a>
+    <a mat-button routerlink="/">Home</a>
     <a mat-button routerlink="">Apontamentos</a>
   </section>
 

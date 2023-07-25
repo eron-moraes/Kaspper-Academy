@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { Injectable, inject } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -16,8 +18,12 @@ export class LoginComponent implements OnInit {
   form!: FormGroup;
   private formSubmit!: boolean;
 
-  //Injeção de dependência
-  constructor(private fb: FormBuilder) { }
+  // Injeção dependência FormBuilder
+  fb = inject(FormBuilder);
+
+  // Injeção do AuthService
+  auth = inject(AuthService);
+
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -28,7 +34,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log(this.form.value);
+    this.auth.login(this.form.value);
   }
 
   isFieldInvalid(field: string) {
