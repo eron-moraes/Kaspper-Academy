@@ -6,6 +6,9 @@ import { UserModel } from '../models/user.model';
   providedIn: 'root'
 })
 export class AuthService {
+  getUfs() {
+    throw new Error('Method not implemented.');
+  }
 
   // Nova abordagem para injeção de dependências
   router = inject(Router);
@@ -27,6 +30,7 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem("user");
+    this.loggedIn.update((value) => value = false);
     this.router.navigate(['/login']);
   }
 

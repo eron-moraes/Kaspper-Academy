@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,12 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/admin/header/header.component';
 import { FooterComponent } from './components/admin/footer/footer.component';
 import { LoginComponent } from "./components/login/login.component";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
         AppComponent,
     ],
-    providers: [],
+    providers: [importProvidersFrom(HttpClientModule)],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,

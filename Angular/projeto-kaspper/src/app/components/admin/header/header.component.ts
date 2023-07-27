@@ -21,4 +21,8 @@ export class HeaderComponent implements OnInit {
     console.log(`Está logado? ${this.auth.isLoggedIn}`);
   }
 
+  logout():void{
+    this.auth.logout();
+  }
+
 }
