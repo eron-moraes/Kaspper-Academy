@@ -1,11 +1,13 @@
-package kaspper.com.bancomysql.models;
+ package kaspper.com.bancomysql.models;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
@@ -51,9 +53,9 @@ public class Usuario {
 	private String email;
 	
 	@Column(name = "data_nascimento")
-	@DateTimeFormat(pattern = "dd/mm/aaaa")
+	@JsonFormat(pattern = "dd/mm/aaaa")
 	@Past
-	private LocalTime dataNascimento;
+	private LocalDate dataNascimento;
 	
 
 }
