@@ -35,9 +35,9 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required]
     });
 
-    this.ufService
-                  .getUfs()
-                  .subscribe((estados) => console.log(estados));
+    //this.ufService
+    //              .getUfs()
+    //              .subscribe((estados) => console.log(estados));
 
 
 

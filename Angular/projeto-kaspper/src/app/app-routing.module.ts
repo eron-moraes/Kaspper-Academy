@@ -11,12 +11,21 @@ const routes: Routes = [
       import('./components/login/login.component').then(x => x.LoginComponent)
   },
 
+
   {
     path: '',
-    loadComponent:()=>
-    import('./components/admin/homr/homr.component').then(x => x.HomrComponent),
-    canActivate:[authGuard]
+    loadComponent: () =>
+      import('./components/admin/homr/homr.component').then(x => x.HomrComponent),
+    canActivate: [authGuard]
+  },
+  {
+    path: 'usuarios',
+    loadComponent:() =>
+      import('./components/admin/usuario/usuario.component').then(x => x.UsuarioComponent),
+      canActivate: [authGuard]
   }
+
+
 ];
 
 

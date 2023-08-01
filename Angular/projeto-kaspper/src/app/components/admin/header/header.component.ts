@@ -5,23 +5,24 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { LogoComponent } from "../../shared/logo/logo.component";
 import { AuthService } from 'src/app/services/auth.service';
 import { CommonModule } from '@angular/common';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
     standalone: true,
-    imports: [CommonModule, MatToolbarModule, MatButtonModule, MatIconModule, LogoComponent]
+    imports: [CommonModule, MatToolbarModule, MatButtonModule, MatIconModule, LogoComponent, AppRoutingModule]
 })
 export class HeaderComponent implements OnInit {
 
   auth =inject(AuthService);
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     console.log(`Está logado? ${this.auth.isLoggedIn}`);
   }
 
-  logout():void{
+  logout():void {
     this.auth.logout();
   }
 
