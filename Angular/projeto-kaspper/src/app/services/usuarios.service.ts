@@ -16,7 +16,7 @@ export class UsuariosService {
     return this.http.get<Usuario[]>(this.API_USUARIO);
   }
 
-  crate(data: Usuario){
+  create(data: Usuario){
     return this.http.post<Usuario>(this.API_USUARIO, data);
   }
 

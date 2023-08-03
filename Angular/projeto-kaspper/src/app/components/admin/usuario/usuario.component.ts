@@ -34,7 +34,7 @@ export class UsuarioComponent implements OnInit {
   }
 
   save(){
-    console.log(this.form.value);
+    this.usuarioService.create(this.form.value);
   }
 
   createForm(){
