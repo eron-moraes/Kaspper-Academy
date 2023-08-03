@@ -16,5 +16,16 @@ export class UsuariosService {
     return this.http.get<Usuario[]>(this.API_USUARIO);
   }
 
-  constructor() { }
+  crate(data: Usuario){
+    return this.http.post<Usuario>(this.API_USUARIO, data);
+  }
+
+
+  update(data:Usuario){
+  return this.http.put(this.API_USUARIO, data);
+  }
+
+  delete(id:string){
+    return this.http.delete(`${this.API_USUARIO}/${id}`);
+  }
 }

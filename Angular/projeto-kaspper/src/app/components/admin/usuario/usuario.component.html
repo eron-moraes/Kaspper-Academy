@@ -1,3 +1,12 @@
+<div class="actions">
+  <a mat-raised-button color="primary"
+    (click)="novoUsuario()">
+  Novo
+  </a>
+</div>
+
+
+
 <table  mat-table [dataSource]="usuarios" class="mat-elevation-z8">
   <ng-container matColumnDef="nome">
     <th mat-header-cell *matHeaderCellDef> Nome </th>

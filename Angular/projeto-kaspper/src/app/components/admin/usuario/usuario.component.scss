@@ -1,4 +1,10 @@
-table{
+table {
   width: 100%;
   margin: 20px;
+}
+
+.actions {
+  display: flex;
+  padding: 20px;
+  justify-content: flex-end;
 }
